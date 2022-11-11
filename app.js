@@ -1,28 +1,79 @@
 
+// loader
+
+setTimeout( function() {
+    $("#loading").addClass("animated fadeOut");
+    setTimeout( function () {
+        $("#loading").removeClass("animated fadeOut");
+        $("#loading").css("display", "none");
+        $('#loading').css("position", "relative");
+        $("#box").css("display", "none");
+    }, 1000);
+}, 1500);
 
 
 
+// list 
+const addBtn = document.querySelector('.add-btn');
+
+addBtn.addEventListener('click', () => {
+    addBtn.classList.add('added');
+    console.log('added');
+})
+
+// list 
+
+const removeBtn = document.querySelector('.remove-btn');
+
+addBtn.addEventListener('click', () => {
+    addBtn.classList.add('added');
+    removeBtn.style.opacity = "1";
+    console.log('added');
+})
+
+
+
+removeBtn.addEventListener('click', () => {
+    addBtn.classList.remove('added');
+    removeBtn.style.opacity = "0";
+    console.log('removed');
+})
+
+//  reciter page
+
+const recitersBtn = document.querySelector('.reciters');
+
+function openPage() {
+    document.querySelector('.reciter-page').classList.add('active');
+}
+
+function openPage2() {
+    document.querySelector('.reciter-page2').classList.add('active');
+}
+
+function openPage3() {
+    document.querySelector('.reciter-page3').classList.add('active');
+}
+
+
+const reciterCloseBtn = document.querySelector('.playlist-reciter .back-btn');
+
+reciterCloseBtn.addEventListener('click', () => {
+    document.querySelector('.reciter-page').classList.remove('active');
+})
+
+document.querySelector('.back-btn2').addEventListener('click', () => {
+    document.querySelector('.reciter-page2').classList.remove('active');
+})
+
+
+
+document.querySelector('.back-btn3').addEventListener('click', () => {
+    document.querySelector('.reciter-page3').classList.remove('active');
+})
 
 //////// carousel ////////
 
-const carousel = [...document.querySelectorAll('.carousel img')];
-
-let index = 0;
-
-const changeCarousel = () => {
-    carousel[index].classList.toggle('active');
-    if(index >= carousel.lenght - 1){
-        index = 0;
-    } else {
-        index++;
-    }
-
-    carousel[index].classList.toggle('active');
-}
-
-setInterval( () => {
-    changeCarousel();
-}, 3000);
 
 
 
@@ -33,7 +84,7 @@ setInterval( () => {
 
 const musicPlayer = document.querySelector('.music-player');
 
-let clickCount = 1;
+let clickCount = 0;
 
 musicPlayer.addEventListener('click', () => {
     if(clickCount >= 2){
@@ -59,6 +110,8 @@ backBtn.addEventListener('click', () => {
 })
 
 
+
+
 // playlist acces
 
 const playlist = document.querySelector('.playlist');
@@ -76,6 +129,7 @@ const backBtnPlaylist = document.querySelector('.playlist .back-btn');
 backBtnPlaylist.addEventListener('click', () => {
     playlist.classList.remove('active');
 })
+
 
 
 
@@ -98,8 +152,8 @@ const queue = [...document.querySelectorAll('.queue')];
 
 const forwardBtn = document.querySelector('i.fa-forward-step');
 const backwardBtn = document.querySelector('i.fa-backward-step');
-const playBtn = document.querySelector('i.fa-play');
-const pauseBtn = document.querySelector('i.fa-pause');
+const playBtn = document.querySelector('.fa-play');
+const pauseBtn = document.querySelector('.fa-pause');
 const repeatBtn = document.querySelector('span.fa-repeat');
 const volumeBtn = document.querySelector('span.fa-volume-high');
 const volumeSlider = document.querySelector('.volume-slider');
@@ -108,9 +162,9 @@ const volumeSlider = document.querySelector('.volume-slider');
 //  playBtn event
 
 playBtn.addEventListener('click', () => {
-    music.play();
     playBtn.classList.remove('active');
     pauseBtn.classList.add('active');
+    music.play();
 })
 
 // pauseBtn event
@@ -143,8 +197,37 @@ const setMusic = (i) => {
     queue.forEach(item => item.classList.remove('active'));
     queue[currentMusic].classList.add('active');
 }
+const queue2 = [...document.querySelectorAll('.queue2')];
 
-setMusic(1);
+const setMusic2 = (a) => {
+    musicBar.value = 0;
+    let song2 = songs2[a];
+    currentMusic = a;
+
+    music.src = song2.path;
+    
+    songName.innerHTML = song2.name;
+    artistName.innerHTML = song2.artist;
+    coverImage.src = song2.cover;
+
+    setTimeout( () => {
+        musicBar.max = music.duration;
+        musicDuration.innerHTML = formatTime(music.duration);
+    }, 300);
+    currentMusicTime.innerHTML = '00: 00';
+
+    queue2.forEach(item2 => item2.classList.remove('active'));
+    queue2[currentMusic].classList.add('active');
+}
+
+queue2.forEach((item2, a) => {
+    item2.addEventListener('click', () => {
+        setMusic2(a);
+        playBtn.click();
+    })
+})
+
+
 
 // format time duration 00:00 format
 
