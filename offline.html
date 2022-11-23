@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Music</title>
+    <link rel="apple-touch-icon" href="/assets/favicon.ico">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <!-- Styles -->
+
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        window.addEventListener('load', () => {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+            }
+        })
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+
+
+    <section class="home-section">
+
+
+
+
+        <nav>
+            <h1>ADM</h1>
+            <div class="right">
+                <i class="fa-solid fa-moon" onclick="darkmode()"></i>
+                <a href="landing.php"><img src="" alt="" id="imgPreview" class="user-img"
+                        style="border-radius: 50%;"></a>
+                <input type="file" id="myFileInput" class="btn btn-success"
+                    style="visibility: hidden; position: absolute;">
+            </div>
+        </nav>
+
+        <h1 style="margin-bottom: 20px;" class="p-5">Il semblerait que vous soyez hors-connexion !</h1>
+
+
+        
+
+        
+    </section>
+    <!-- <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script src="img.js"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+</body>
+
+</html>

@@ -1,15 +1,15 @@
 
 // loader
 
-setTimeout( function() {
+setTimeout(function () {
     $("#loading").addClass("animated fadeOut");
-    setTimeout( function () {
+    setTimeout(function () {
         $("#loading").removeClass("animated fadeOut");
         $("#loading").css("display", "none");
         $('#loading').css("position", "relative");
         $("#box").css("display", "none");
-    }, 1000);
-}, 1500);
+    }, 500);
+}, 500);
 
 
 
@@ -87,13 +87,13 @@ const musicPlayer = document.querySelector('.music-player');
 let clickCount = 0;
 
 musicPlayer.addEventListener('click', () => {
-    if(clickCount >= 2){
+    if (clickCount >= 2) {
         musicPlayer.classList.add('active');
         clickCount = 1;
         return;
     }
     clickCount++;
-    setTimeout( () => {
+    setTimeout(() => {
         clickCount = 1;
 
     }, 250);
@@ -153,7 +153,7 @@ const queue = [...document.querySelectorAll('.queue')];
 const forwardBtn = document.querySelector('i.fa-forward-step');
 const backwardBtn = document.querySelector('i.fa-backward-step');
 const playBtn = document.querySelector('.fa-play');
-const pauseBtn = document.querySelector('.fa-pause');
+const pauseBtn = document.querySelector('.main i.fa-pause');
 const repeatBtn = document.querySelector('span.fa-repeat');
 const volumeBtn = document.querySelector('span.fa-volume-high');
 const volumeSlider = document.querySelector('.volume-slider');
@@ -169,10 +169,12 @@ playBtn.addEventListener('click', () => {
 
 // pauseBtn event
 
+
 pauseBtn.addEventListener('click', () => {
-    music.pause();
+
     pauseBtn.classList.remove('active');
     playBtn.classList.add('active');
+    music.pause();
 })
 
 //  function for setting music
@@ -183,12 +185,12 @@ const setMusic = (i) => {
     currentMusic = i;
 
     music.src = song.path;
-    
+
     songName.innerHTML = song.name;
     artistName.innerHTML = song.artist;
     coverImage.src = song.cover;
 
-    setTimeout( () => {
+    setTimeout(() => {
         musicBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
     }, 300);
@@ -205,12 +207,12 @@ const setMusic2 = (a) => {
     currentMusic = a;
 
     music.src = song2.path;
-    
+
     songName.innerHTML = song2.name;
     artistName.innerHTML = song2.artist;
     coverImage.src = song2.cover;
 
-    setTimeout( () => {
+    setTimeout(() => {
         musicBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
     }, 300);
@@ -227,18 +229,18 @@ queue2.forEach((item2, a) => {
     })
 })
 
-
+setMusic(0);
 
 // format time duration 00:00 format
 
 const formatTime = (time) => {
     let min = Math.floor(time / 60);
-    if(min < 10){
+    if (min < 10) {
         min = `0` + min;
     }
 
     let sec = Math.floor(time % 60);
-    if(sec < 10){
+    if (sec < 10) {
         sec = `0` + sec;
     }
 
@@ -248,15 +250,15 @@ const formatTime = (time) => {
 
 //  music bar events
 
-setInterval( () => {
+setInterval(() => {
     musicBar.value = music.currentTime;
     currentMusicTime.innerHTML = formatTime(music.currentTime);
-    if(Math.floor(music.currentTime) == Math.floor(musicBar.max)){
-        if(repeatBtn.className.includes('active')){
+    if (Math.floor(music.currentTime) == Math.floor(musicBar.max)) {
+        if (repeatBtn.className.includes('active')) {
             setMusic(currentMusic);
             playBtn.click();
 
-        } else{
+        } else {
             forwardBtn.click();
         }
     }
@@ -269,9 +271,9 @@ musicBar.addEventListener('change', () => {
 // forward btn
 
 forwardBtn.addEventListener('click', () => {
-    if(currentMusic >= songs.length -1){
+    if (currentMusic >= songs.length - 1) {
         currentMusic = 0;
-    } else{
+    } else {
         currentMusic++;
     }
 
@@ -282,9 +284,9 @@ forwardBtn.addEventListener('click', () => {
 // backward btn
 
 backwardBtn.addEventListener('click', () => {
-    if(currentMusic <= 0){
-        currentMusic = song.lenght -1;
-    } else{
+    if (currentMusic <= 0) {
+        currentMusic = song.lenght - 1;
+    } else {
         currentMusic--;
     }
 
@@ -297,7 +299,7 @@ backwardBtn.addEventListener('click', () => {
 
 repeatBtn.addEventListener('click', () => {
     repeatBtn.classList.toggle('active');
-    
+
 })
 
 
@@ -317,6 +319,46 @@ queue.forEach((item, i) => {
         setMusic(i);
         playBtn.click();
     })
+})
+
+
+
+
+// name save
+
+const take_input = document.getElementById("take_input")
+const save_value = document.getElementById("save_value")
+const localstorage_value = document.getElementById("localstorage_value")
+const nameChanger = document.querySelector('.name-changer');
+const openNameBtn = document.querySelector('.name-container i');
+
+
+
+document.querySelector('.fa-house').addEventListener('click', () => {
+    document.querySelector('.profil-page').classList.remove('active');
+})
+
+document.querySelector('.user-img').addEventListener('click', () => {
+    document.querySelector('.profil-page').classList.add('active');
+})
+
+save_value.onclick = function () {
+    localStorage.setItem('name', take_input.value);
+    localstorage_value.innerHTML = localStorage.getItem("name");
+    nameChanger.classList.remove('active');
+    document.querySelector('.outsiders').classList.remove('active');
+}
+function get() {
+    localstorage_value.innerHTML = localStorage.getItem("name");
+    const recentImageDataUrl = localStorage.getItem('recent-image');
+
+    if (recentImageDataUrl) {
+        document.querySelector('.user-img').setAttribute('src', recentImageDataUrl);
+    }
+}
+openNameBtn.addEventListener('click', () => {
+    nameChanger.classList.add('active');
+    document.querySelector('.outsiders').classList.add('active');
 })
 
 

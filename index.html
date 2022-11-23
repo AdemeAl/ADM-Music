@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADM Music</title>
-    <link rel="apple-touch-icon" href="/assets/favicon.ico">
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/favicon_io/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/assets/favicon_io/apple-touch-icon.png" type="image/x-icon">
+    <link rel=" icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Styles -->
 
     <link rel="manifest" href="manifest.json">
+
+    <script>
+        window.addEventListener('load', () => {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js')
+            }
+        })
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -20,7 +29,7 @@
 
 </head>
 
-<body>
+<body onload="get()">
     <div class="reciter-page ">
         <div class="banner">
             <img class="rounded" src="https://i.pinimg.com/564x/14/56/7f/14567fa0c053c4f29d6b0e606f232424.jpg" alt="">
@@ -338,7 +347,8 @@
 
     <div class="reciter-page3 reciter-page">
         <div class="banner">
-            <img class="rounded" src="https://s-media-cache-ak0.pinimg.com/564x/09/92/d4/0992d470d64666062a95d6f9a063ef10.jpg" alt="">
+            <img class="rounded"
+                src="https://s-media-cache-ak0.pinimg.com/564x/09/92/d4/0992d470d64666062a95d6f9a063ef10.jpg" alt="">
             <h1>Abdullah Basfar</h1>
         </div>
 
@@ -654,7 +664,8 @@
 
     <div class="reciter-page2 reciter-page">
         <div class="banner">
-            <img onclick="setMusic2();" class="rounded" src="https://s-media-cache-ak0.pinimg.com/564x/ab/cc/99/abcc9949d0419ef1f0963a54aef06397.jpg" alt="">
+            <img onclick="setMusic2();" class="rounded"
+                src="https://s-media-cache-ak0.pinimg.com/564x/ab/cc/99/abcc9949d0419ef1f0963a54aef06397.jpg" alt="">
             <h1>Maher Al Muaiqly</h1>
         </div>
 
@@ -967,6 +978,29 @@
 
     </div>
 
+    <div  class="profil-page">
+        <h1>Profil</h1>
+        <i class="fa-solid fa-house"></i>
+        <div class="profil-img">
+            <img src="./assets/user.png" alt="" id="imgPreview">
+            <i class="fa-solid fa-user-pen"><input type="file" id="myFileInput" class="btn btn-success"></i>
+        </div>
+        <div class="name-container">
+            <h2 id="localstorage_value"></h2>
+            <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+
+        <div class="name-changer ">
+            <div class="outsiders">
+                <label>Entrer un pseudo :</label>
+                <input type="text" id="take_input"><br>
+                <button type="button" id="save_value">Save</button>
+            </div>
+            
+        </div>
+
+    </div>
+
     <audio src="" id="audio-source"></audio>
 
     <div id="loading">
@@ -982,10 +1016,8 @@
             <h1>ADM</h1>
             <div class="right">
                 <i class="fa-solid fa-moon" onclick="darkmode()"></i>
-                <a href="landing.php"><img src="" alt="" id="imgPreview" class="user-img"
-                        style="border-radius: 50%;"></a>
-                <input type="file" id="myFileInput" class="btn btn-success"
-                    style="visibility: hidden; position: absolute;">
+                <img src="./assets/user.png" alt="" id="imgPreview" class="user-img" style="border-radius: 50%;">
+                
             </div>
         </nav>
 
@@ -1005,7 +1037,7 @@
         </div>
 
 
-        
+
 
         <h1 class="heading">Recently Played</h1>
         <div class="playlists-group">
@@ -1045,8 +1077,8 @@
                 <p class="playlist-card-name">Saad-Al Ghamdi</p>
             </div>
             <div class="playlist-card reciters" onclick="openPage2()"" >
-                <img src="https://i.pinimg.com/564x/8b/cd/c2/8bcdc2b4e535b07df091bddf28728278.jpg"
-                    class="playlist-card-img rounded" alt="">
+                <img src=" https://i.pinimg.com/564x/8b/cd/c2/8bcdc2b4e535b07df091bddf28728278.jpg"
+                class="playlist-card-img rounded" alt="">
                 <p class="playlist-card-name">Maher-Al Muaiqly</p>
             </div>
             <div class="playlist-card reciters" onclick="openPage3()">
@@ -1136,7 +1168,6 @@
                 <span class="fa-solid fa-repeat"></span>
                 <div class="main">
                     <i class="fa-solid fa-backward-step active"></i>
-
                     <i class="fa-solid fa-play active"></i>
                     <i class="fa-solid fa-pause"></i>
                     <i class="fa-solid fa-forward-step active"></i>
