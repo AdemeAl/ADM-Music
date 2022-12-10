@@ -13,6 +13,12 @@ setTimeout(function () {
 
 
 
+const refBtn = document.querySelector('.fa-arrows-rotate');
+
+refBtn.addEventListener('click', function () {
+    location.reload();
+})
+
 // list 
 const addBtn = document.querySelector('.add-btn');
 
@@ -229,6 +235,36 @@ queue2.forEach((item2, a) => {
     })
 })
 
+const queue3 = [...document.querySelectorAll('.queue3')];
+
+const setMusic3 = (a) => {
+    musicBar.value = 0;
+    let song3 = songs3[a];
+    currentMusic = a;
+
+    music.src = song3.path;
+
+    songName.innerHTML = song3.name;
+    artistName.innerHTML = song3.artist;
+    coverImage.src = song3.cover;
+
+    setTimeout(() => {
+        musicBar.max = music.duration;
+        musicDuration.innerHTML = formatTime(music.duration);
+    }, 300);
+    currentMusicTime.innerHTML = '00: 00';
+
+    queue3.forEach(item3 => item3.classList.remove('active'));
+    queue3[currentMusic].classList.add('active');
+}
+
+queue3.forEach((item3, a) => {
+    item3.addEventListener('click', () => {
+        setMusic3(a);
+        playBtn.click();
+    })
+})
+
 setMusic(0);
 
 // format time duration 00:00 format
@@ -328,11 +364,11 @@ queue.forEach((item, i) => {
 
 const take_input = document.getElementById("take_input")
 const save_value = document.getElementById("save_value")
-const localstorage_value = document.getElementById("localstorage_value")
+const localstorage_value = document.querySelector(".localstorage_value")
 const nameChanger = document.querySelector('.name-changer');
 const openNameBtn = document.querySelector('.name-container i');
 
-
+const localstorage_value1 = document.querySelector('.localstorage_value1');
 
 document.querySelector('.fa-house').addEventListener('click', () => {
     document.querySelector('.profil-page').classList.remove('active');
@@ -350,6 +386,7 @@ save_value.onclick = function () {
 }
 function get() {
     localstorage_value.innerHTML = localStorage.getItem("name");
+    localstorage_value1.innerHTML = localStorage.getItem("name");
     const recentImageDataUrl = localStorage.getItem('recent-image');
 
     if (recentImageDataUrl) {

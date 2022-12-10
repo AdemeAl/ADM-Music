@@ -573,7 +573,8 @@ body.dark-mode .music-player{
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    background-color: #000;
+    background-color: #fff;
+    color: #000;
     position: fixed;
     z-index: 990;
     overflow: auto;
@@ -615,6 +616,13 @@ body.dark-mode .profil-page{
     position: absolute;
 }
 
+.profil-page .fa-arrows-rotate{
+    right: 60px;
+    top: 25px;
+    font-size: 25px;
+    position: absolute;
+}
+
 .profil-page h2{
     text-align: center;
     margin-top: 15px;
@@ -626,6 +634,7 @@ body.dark-mode .profil-page{
     width: 100px;
     text-align: center;
     margin-top: 15px;
+    object-fit: cover;
 }
 .name-container{
     display: flex;
@@ -639,6 +648,7 @@ body.dark-mode .profil-page{
     margin-top: 10px;
     
 }
+
 
 .profil-page input{
     margin-left: -100px;
@@ -687,6 +697,74 @@ body.dark-mode .profil-page{
 
 }
 
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 100px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #1e1e1e;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #242424;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+
+  .dark-mode-set{
+    display: flex;
+    align-items: center;
+
+  }
 
 
 
@@ -799,6 +877,23 @@ body.dark-mode .reciter-page{
 }
 
 .queue2 .name{
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.queue3{
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--alpha-color);
+}
+.queue3.active .queue-cover i{
+    display: block;
+}
+
+.queue3 .name{
     font-size: 22px;
     text-transform: capitalize;
 }

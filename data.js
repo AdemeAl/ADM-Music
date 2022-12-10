@@ -1,4 +1,3 @@
-
 let songs = [
     {
         name: 'Surat An-Naba\'',
@@ -222,12 +221,12 @@ let songs = [
         artist: 'Saad Al-Ghamdi',
         cover: 'https://surahquran.com/img/blog/quran.png'
     }
-    
-  ];
-  
+
+];
 
 
-  let songs2 = [
+
+let songs2 = [
     {
         name: 'Surat An-Naba\'',
         path: 'https://server12.mp3quran.net/maher/078.mp3',
@@ -450,4 +449,230 @@ let songs = [
         artist: 'Maher Al Muaiqly',
         cover: 'https://cdn.wallpapersafari.com/30/88/6C0gMO.jpg'
     }
-  ];
+];
+
+
+let songs3 = [
+    {
+        name: 'Surat An-Naba\'',
+        path: 'https://server6.mp3quran.net/bsfr/078.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat An-Nazi\'at',
+        path: 'https://server6.mp3quran.net/bsfr/079.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat \'Abasa',
+        path: 'https://server6.mp3quran.net/bsfr/080.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat At-Takwir',
+        path: 'https://server6.mp3quran.net/bsfr/081.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Infitar',
+        path: 'https://server6.mp3quran.net/bsfr/082.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-mutaffifin',
+        path: 'https://server6.mp3quran.net/bsfr/83.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Inshiqaq',
+        path: 'https://server6.mp3quran.net/bsfr/084.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Buruj',
+        path: 'https://server6.mp3quran.net/bsfr/085.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat At-Tariq',
+        path: 'https://server6.mp3quran.net/bsfr/086.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-A\'la',
+        path: 'https://server6.mp3quran.net/bsfr/087.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Ghashiyah',
+        path: 'https://server6.mp3quran.net/bsfr/088.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Fajr',
+        path: 'https://server6.mp3quran.net/bsfr/089.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Balad',
+        path: 'https://server6.mp3quran.net/bsfr/090.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Ash-Shams',
+        path: 'https://server6.mp3quran.net/bsfr/091.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Layl',
+        path: 'https://server6.mp3quran.net/bsfr/092.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Ad-Duha',
+        path: 'https://server6.mp3quran.net/bsfr/093.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Ash-Sharh',
+        path: 'https://server6.mp3quran.net/bsfr/094.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat At-Tin',
+        path: 'https://server6.mp3quran.net/bsfr/095.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-\'Alaq',
+        path: 'https://server6.mp3quran.net/bsfr/096.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Qadr',
+        path: 'https://server6.mp3quran.net/bsfr/097.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Bayyinah',
+        path: 'https://server6.mp3quran.net/bsfr/098.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Zilzal',
+        path: 'https://server6.mp3quran.net/bsfr/099.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-\'Adiyat',
+        path: 'https://server6.mp3quran.net/bsfr/100.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Qari\'ah',
+        path: 'https://server6.mp3quran.net/bsfr/101.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat At-Takathur',
+        path: 'https://server6.mp3quran.net/bsfr/102.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-\'Asr',
+        path: 'https://server6.mp3quran.net/bsfr/103.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Humazah',
+        path: 'https://server6.mp3quran.net/bsfr/104.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Fil',
+        path: 'https://server6.mp3quran.net/bsfr/105.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Quraish',
+        path: 'https://server6.mp3quran.net/bsfr/106.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Ma\'un',
+        path: 'https://server6.mp3quran.net/bsfr/107.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Kawthar',
+        path: 'https://server6.mp3quran.net/bsfr/108.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Kafiroun',
+        path: 'https://server6.mp3quran.net/bsfr/109.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat An-Nasr',
+        path: 'https://server6.mp3quran.net/bsfr/110.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Masad',
+        path: 'https://server6.mp3quran.net/bsfr/111.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Ikhlas',
+        path: 'https://server6.mp3quran.net/bsfr/112.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat Al-Falaq',
+        path: 'https://server6.mp3quran.net/bsfr/113.mp3 ',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    },
+    {
+        name: 'Surat An-Nas',
+        path: 'https://server6.mp3quran.net/bsfr/114.mp3',
+        artist: 'Abdullah Basfar',
+        cover: 'https://i.pinimg.com/236x/f5/7b/a1/f57ba14ba4844cee88cdf7cfb2b06510.jpg'
+    }
+];
